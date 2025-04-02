@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    // その他の設定があればここに追加
-  }
-  
-  module.exports = nextConfig
+  output: 'export',
+  distDir: 'out'  // 出力ディレクトリを明示的に指定
+}
+
+module.exports = nextConfig

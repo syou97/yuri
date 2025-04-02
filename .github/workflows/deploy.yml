@@ -7,13 +7,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 明示的に書き込み権限を追加
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3  # 最新バージョンに更新
+      - uses: actions/setup-node@v3  # 最新バージョンに更新
         with:
-          node-version: '20' # ここを'16'から'20'に変更
+          node-version: '20'
       - run: npm ci
-      - run: npm run deploy
+      - run: npm run build  # deployではなくbuildを使用
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
