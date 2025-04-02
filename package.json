@@ -8,7 +8,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "tailwind:init": "tailwindcss init -p"
+    "tailwind:init": "tailwindcss init -p",
+  "build": "next build",
+  "export": "next export",
+  "deploy": "next build && next export"
+}
   },
   "keywords": [],
   "author": "",
@@ -27,4 +31,4 @@
     "tailwindcss": "^4.0.17"
   }
   
-}
+
